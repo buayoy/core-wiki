@@ -64,8 +64,10 @@ import { FileUploadComponent } from './view/file-upload/file-upload.component';
 import { AngularFirestoreModule } from '../../node_modules/angularfire2/firestore';
 import { AngularFireStorageModule ,AngularFireUploadTask} from '../../node_modules/angularfire2/storage';
 import { DropZoneDirective } from './view/drop-zone.directive';
-import { FileSizePipe } from './view/file-size.pipe';
 import { FirebaseConfig } from '../environments/firebaseconfig';
+import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
+import { FileSizePipe } from './file-size.pipe';
+import { CustomerAppComponent } from './view/customer-app/customer-app.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -89,6 +91,9 @@ import { FirebaseConfig } from '../environments/firebaseconfig';
     BsDatepickerModule.forRoot(),
     AngularFirestoreModule,
     AngularFireStorageModule,
+   
+    AngularFireAuthModule,
+
     
 
 
@@ -115,7 +120,7 @@ import { FirebaseConfig } from '../environments/firebaseconfig';
     FileSizePipe,
     ButtonsComponent,
     FileUploadComponent,
-    
+    CustomerAppComponent,
   ],
   providers: [{
     provide: LocationStrategy,

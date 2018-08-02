@@ -12,6 +12,7 @@ import { SimpleLineIconsComponent } from './views/icons/simple-line-icons.compon
 import { ButtonsComponent } from './views/buttons/buttons.component';
 import { TablesComponent } from './views/tables/tables.component';
 import { FileUploadComponent } from './view/file-upload/file-upload.component';
+
 // Import Containers
 
 
@@ -29,11 +30,6 @@ const routes: Routes = [
   {path: 'simplelineIcons', component: SimpleLineIconsComponent},
   {path: 'buttons', component: ButtonsComponent},
   {path: 'upload', component: FileUploadComponent},
-
-
-
-
-
   {path: '**', redirectTo: '/home', pathMatch: 'full'},
   
 ];
