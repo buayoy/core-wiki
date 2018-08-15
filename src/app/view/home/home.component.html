@@ -1,14 +1,4 @@
-<div class="btn-group float-left" dropdown>
-    <button type="button"  dropdownToggle>
-      <i class="icon-calculator">icon</i>
-    </button>
-    <div class="dropdown-menu dropdown-menu-left" *dropdownMenu>
-      <a routerLink="/coreuiIcons" class="dropdown-item">CoreUIIcons</a>
-      <a  class="dropdown-item" routerLink="/flagsIcons" >FlagsIcon</a>
-      <a  class="dropdown-item" routerLink="/fontAwesomeIcon" >FontAwesomeIcon</a>
-      <a class="dropdown-item"  routerLink="/simplelineIcons" >SimplelineIcons</a>
-    </div>
-  </div>
+
 
    <!--/.row-->
    <div class="row">
@@ -23,6 +13,8 @@
                 <tr>
                 <td>Name</td>
                 <td>Description</td>
+                <td>Test</td>
+
                 <td>Action</td>
                 </tr>
                 </thead>
@@ -32,6 +24,8 @@
 
 <td>{{data.value.name}}</td>
 <td>{{data.value.description}}</td>
+<td>{{data.value.test}}</td>
+
 <td>
     <button class="badge badge-success" type="button" (click)="editWiki(data)" >Edit</button>
     <button class="badge badge-danger" type="button" (click)="delWiki(data)" >Delete</button>

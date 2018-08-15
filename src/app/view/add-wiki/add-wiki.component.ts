@@ -32,7 +32,7 @@ export class AddWikiComponent implements OnInit {
  
  
   wiki: any = {};
-  title: string = "Add Wiki"
+  title: string = "เพิ่ม Wiki";
   id;
 
   constructor(private firebaseService: FirebaseService, private route: ActivatedRoute, private router: Router , private db:AngularFireDatabase) {
@@ -42,7 +42,7 @@ export class AddWikiComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get("id");
     if (this.id) {
-      this.title = "Edit wiki";
+      this.title = "แก้ไข wiki";
       this.getWikiByKey(this.id);
     }
   }

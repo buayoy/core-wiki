@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { navItems2 } from './nav';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,20 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) { }
+  public navItems = navItems2;
+  public sidebarMinimized = true;
+  private changes: MutationObserver;
+  public element: HTMLElement = document.body;
+
+  constructor(private router: Router) {
+    this.changes = new MutationObserver((mutations) => {
+      this.sidebarMinimized = document.body.classList.contains('sidebar-minimized')
+    });
+
+    this.changes.observe(<Element>this.element, {
+      attributes: true
+    });
+   }
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {

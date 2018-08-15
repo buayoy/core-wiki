@@ -1,12 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { navItems } from '../../_nav';
+import { navItems2 } from '../../nav';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './default-layout.component.html'
 })
 export class DefaultLayoutComponent {
-  public navItems = navItems;
+  public navItems = navItems2;
+  
   public sidebarMinimized = true;
   private changes: MutationObserver;
   public element: HTMLElement = document.body;

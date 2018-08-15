@@ -66,8 +66,9 @@ import { AngularFireStorageModule ,AngularFireUploadTask} from '../../node_modul
 import { DropZoneDirective } from './view/drop-zone.directive';
 import { FirebaseConfig } from '../environments/firebaseconfig';
 import { AngularFireAuthModule } from '../../node_modules/angularfire2/auth';
-import { FileSizePipe } from './file-size.pipe';
 import { CustomerAppComponent } from './view/customer-app/customer-app.component';
+import { FileSizePipe } from './view/file-size.pipe';
+import { ToasterService } from 'angular2-toaster';
 @NgModule({
   imports: [
     BrowserModule,
@@ -93,7 +94,6 @@ import { CustomerAppComponent } from './view/customer-app/customer-app.component
     AngularFireStorageModule,
    
     AngularFireAuthModule,
-
     
 
 
@@ -126,7 +126,8 @@ import { CustomerAppComponent } from './view/customer-app/customer-app.component
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   },
-  FirebaseService],
+  FirebaseService,
+  ToasterService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
